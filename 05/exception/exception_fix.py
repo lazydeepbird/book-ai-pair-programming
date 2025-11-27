@@ -2,19 +2,20 @@ def main():
     try:
         divisor = 0
         x = 1 / divisor
-    except Exception as e:
-        print("Error", e)
+    except ZeroDivisionError as e:
+        print(f"ZeroDivisionError: {e}")
     
     try:
         my_dict = {'name': 'Alice'}
-        age = my_dict.get('age')
-    except Exception as e:
-        print("Error", e)
+        age = my_dict.get('age', 'N/A')
+        print(f"Age: {age}")
+    except KeyError as e:
+        print(f"KeyError: {e}")
 
     try:
-        int('abc')  # ValueError
-    except Exception as e:
-        print("Error", e)
+        num = int('abc')  # ValueError
+    except ValueError as e:
+        print(f"ValueError: {e}")
 
 if __name__ == "__main__":
     main()

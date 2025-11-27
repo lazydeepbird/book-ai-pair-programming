@@ -3,8 +3,9 @@ class MyClass:
         self.name = name
         self.age = age
 
-    def print_info(self)
+    def print_info(self):
         print(f"Name: {self.name}, Age: {self.age}")
+
 
 def main():
     people = [
@@ -18,11 +19,11 @@ def main():
 
     print("Total people: ", len(people))
 
-    with open('file.txt') as f:
+    with open('file.txt', encoding='utf-8') as f:
         content = f.read()
-        print("File content: ", content
+        print("File content: ", content)
 
-    x = lambda a, b a + b
+    x = lambda a, b: a + b
     print("Lambda result: ", x(5, 10))
 
 if __name__ == "__main__":
