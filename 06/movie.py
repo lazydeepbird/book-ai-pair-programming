@@ -18,3 +18,4 @@ class Ticket:
     def __init__(self, movie: Movie, time: datetime):
         self.id = uuid.uuid4()
         self.movie_id = movie.id
+        self.time = time
